@@ -11,3 +11,149 @@ p{
 body {
   background-color: #F7F7DD;
 }
+nav {
+  background: #FFF;
+  color: #EBEBD3;
+  padding: 2em 0;
+  position: relative;
+}
+
+nav::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  align: left;
+  margin: 0;
+  width: 30%;
+  height: 15%;
+}
+
+.site-nav {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #464655;
+  height: 0px;
+  overflow: hidden;
+}
+
+.site-nav--open {
+  height: auto;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #7FBCD6;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 2em 6em 2em 2em;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #e4b363;
+  color: #014292
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255,255,255,0.45);
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+  content: '';
+  display: block;
+  background: #ebebd3;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translatey(-7px);
+}
+
+.hamburger::after {
+  transform: translatey(4px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translatey(-3px) rotate(-90deg);
+}
+
+@media (min-width: 700px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus {
+    background: transparent;
+  }
+
+  .site-nav--icon {
+    display: none;
+  }
+
+}

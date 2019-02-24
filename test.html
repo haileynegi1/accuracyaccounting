@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <link rel="stylesheet"type="text/css" href="CSS/test.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <script type="text/javascript" src="JS/navbar.js"></script>
   <head>
+    <link rel="stylesheet"type="text/css" href="CSS/test.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script type="text/javascript" src="JS/navbar.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
 <nav>
   <div class="container">
-    <img class="logo" src="Images/FBLALOGO.jpg" alt="logo">
+    <img class="logo" src="Images/FBLALOGO.jpg" alt="fblalogo">
       <ul class="site-nav">
         <li><a href="#"><i class="fa fa-home site-nav--icon"></i>Home</a></li>
         <li><a href="#"><i class="fa fa-info site-nav--icon"></i>About</a></li>
@@ -17,6 +21,12 @@
       </ul>
   <div class="menu-toggle">
   <div class="hamburger"></div>
+  <script>
+  $('.menu-toggle').click(function(){
+    $('.site-nav').toggleClass('site-nav--open', 500);
+    $(this).toggleClass('open');
+  });
+  </script>
   </div>
   </div>
 </nav>

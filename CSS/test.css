@@ -16,6 +16,7 @@ nav {
   color: #EBEBD3;
   padding: 2em 0;
   position: relative;
+  margin: -1%;
 }
 
 nav::after {
@@ -33,13 +34,12 @@ nav::after {
 .logo {
   float: left;
   align: left;
-  margin: 0;
-  width: 30%;
-  height: 15%;
+  width: 29%;
+  height: 14%;
 }
 
 .site-nav {
-  margin: 0;
+  margin-top: 1.7%;
   padding: 0;
   position: absolute;
   top: 100%;
@@ -125,7 +125,6 @@ nav::after {
 }
 
 @media (min-width: 700px) {
-
   .menu-toggle {
     display: none;
   }
@@ -136,6 +135,7 @@ nav::after {
     background: transparent;
     float: right;
   }
+
 
   .site-nav li {
     display: inline-block;

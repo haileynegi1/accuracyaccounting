@@ -139,6 +139,11 @@ body {
 				font-size: 75%; /* 12 */
 			}
 
+      .logo {
+        width: 43%;
+        margin-top: 2%
+      }
+
 			#nav
 			{
 				position: relative;
@@ -153,6 +158,8 @@ body {
 					text-indent: -9999px;
 					background-color: #e15a1f;
 					position: relative;
+          float: right;
+          margin-right: 2%;
 				}
 					#nav > a:before,
 					#nav > a:after

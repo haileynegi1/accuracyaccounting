@@ -31,11 +31,13 @@ body {
 			#nav li
 			{
 				position: relative;
+
 			}
 				#nav li a
 				{
 					color: #fff;
 					display: block;
+          text-decoration: none;
 				}
 				#nav li a:active
 				{
@@ -59,6 +61,7 @@ body {
 			{
 				height: 3.75em; /* 60 */
 				background-color: #fff;
+
 			}
 				#nav > ul > li
 				{

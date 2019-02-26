@@ -7,13 +7,7 @@ html {
   font-family: "Montserrat", "HelveticaNeueLTStd", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.5;
 }
-#FBLALOGO {
-float:left;
-width: 27%;
-position: absolute;
-margin-top: .5%;
-z-index:1000;
-}
+
 .fadein {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -34,8 +28,6 @@ z-index:1000;
           transform: scale(0.95);
   -webkit-transform-origin: center;
           transform-origin: center;
-}
-
 }
 .blur-up:not(.lazyload) {
   opacity: 1;
@@ -92,6 +84,15 @@ z-index:1000;
   position: relative;
   display: inline-block;
 }
+.FBLALOGO {
+float:left;
+width: 20%;
+margin-top: -.5%;
+left: 0%;
+position: absolute;
+z-index:10000;
+}
+
 [id=sidebar] a:before, [id=sidebar] a:after {
   content: "";
   position: absolute;
@@ -203,6 +204,9 @@ h2, fieldset legend {
   h2, fieldset legend {
     font-size: calc(1.214767763rem + 1.153825274 * ((100vw - 37.5rem) / 42.5));
   }
+}
+
+
 }
 @media screen and (min-width: 80rem) {
   h2, fieldset legend {
@@ -630,6 +634,7 @@ body {
   font-size: 12px;
   display: none;
   cursor: default;
+  color: white;
 }
 @media (min-width: 640px) {
   [id=header] .tagline {

@@ -634,6 +634,7 @@ body {
   font-size: 12px;
   display: none;
   cursor: default;
+  color: white;
 }
 @media (min-width: 640px) {
   [id=header] .tagline {

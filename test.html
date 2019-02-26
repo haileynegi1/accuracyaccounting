@@ -4,13 +4,15 @@
   <head>
     <link rel="stylesheet"type="text/css" href="CSS/navbar.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="    https://codepen.io/mican/pen/yoOYLZ">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="JS/navbar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+
   <header id="header">
-    <div class="brand container"><img id="FBLALOGO" href="images/FBLALOGO.JPG"></div>
+    <div class="brand container"><a class="logo" href="https://codepen.io/collection/XRoxGR" rel="home" target="_blank"></a><span class="tagline"> t the  of </span><img src="images/FBLALOGO.JPG" class="FBLALOGO"></div>
     <nav class="nav container" id="nav">
       <ul class="menu">
         <li class="menu-item"><a href="">home</a>
@@ -52,197 +54,210 @@
   </div>
   <script>
   (function() {
-  var block, i, j, len, len1, ref, ref1, responsiveMenu, slideToggler, trigger,
-    indexOf = [].indexOf;
+    var block, i, j, len, len1, ref, ref1, responsiveMenu, slideToggler, trigger,
+      indexOf = [].indexOf;
 
-  slideToggler = class slideToggler {
-    constructor(el1) {
-      this.getHeight = this.getHeight.bind(this);
-      this.toggle = this.toggle.bind(this);
-      this.el = el1;
-      if (!this.el) {
-        return;
+    (function() {
+      var footer;
+      footer = '<footer id="footer" role="contentinfo"> <div class="container"> <h3 class="footer-title"> <a href="https://codepen.io/collection/XRoxGR" target="_blank">Calibration template</a> </h3> <p class="footer-entry"> <a href="https://mobilemarkup.com" target="_blank">mobileMarkup.com</a> </p> </div> </footer>';
+      return document.body.insertAdjacentHTML('beforeend', footer);
+    })();
+
+    (function() {
+      var logo, logo_css;
+      logo = '<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>codepen-logo</title><path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zM7.139 21.651l1.35-1.35a.387.387 0 0 0 0-.54l-3.49-3.49a.387.387 0 0 0-.54 0l-1.35 1.35a.39.39 0 0 0 0 .54l3.49 3.49a.38.38 0 0 0 .54 0zm6.922.153l2.544-2.543a.722.722 0 0 0 0-1.018l-6.582-6.58a.722.722 0 0 0-1.018 0l-2.543 2.544a.719.719 0 0 0 0 1.018l6.58 6.579c.281.28.737.28 1.019 0zm14.779-5.85l-7.786-7.79a.554.554 0 0 0-.788 0l-5.235 5.23a.558.558 0 0 0 0 .789l7.79 7.789c.216.216.568.216.785 0l5.236-5.236a.566.566 0 0 0 0-.786l-.002.003zm-3.89 2.806a.813.813 0 1 1 0-1.626.813.813 0 0 1 0 1.626z" fill="#FFF" fill-rule="evenodd"/></svg>';
+      logo_css = '.mM{display:block;border-radius:50%;box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);position:fixed;bottom:1em;right:1em;-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:all 240ms ease-in-out;transition:all 240ms ease-in-out;z-index:9999;opacity:0.75}.mM svg{display:block}.mM:hover{opacity:1;-webkit-transform:scale(1.125);transform:scale(1.125)}';
+      document.head.insertAdjacentHTML('beforeend', '<style>' + logo_css + '</style>');
+      document.body.insertAdjacentHTML('beforeend', '<a href="https://codepen.io/mican/" target="_blank" class="mM">' + logo + '</a>');
+    })();
+
+    slideToggler = class slideToggler {
+      constructor(el1) {
+        this.getHeight = this.getHeight.bind(this);
+        this.toggle = this.toggle.bind(this);
+        this.el = el1;
+        if (!this.el) {
+          return;
+        }
+        window.addEventListener('resize', this.getHeight);
       }
-      window.addEventListener('resize', this.getHeight);
-    }
 
-    getHeight() {
-      var clone;
-      clone = this.el.cloneNode(true);
-      clone.style.cssText = 'visibility: hidden; display: block; margin: -999px 0';
-      this.height = (this.el.parentNode.appendChild(clone)).clientHeight;
-      this.el.parentNode.removeChild(clone);
-      return this.height;
-    }
+      getHeight() {
+        var clone;
+        clone = this.el.cloneNode(true);
+        clone.style.cssText = 'visibility: hidden; display: block; margin: -999px 0';
+        this.height = (this.el.parentNode.appendChild(clone)).clientHeight;
+        this.el.parentNode.removeChild(clone);
+        return this.height;
+      }
 
-    toggle(time) {
-      var currHeight, disp, el, end, init, repeat, start;
-      this.getHeight();
-      time || (time = this.height / 3 + 150);
-      currHeight = this.el.clientHeight * (getComputedStyle(this.el).display !== 'none');
-      [start, end] = currHeight > this.height / 2 ? [this.height, 0] : [0, this.height];
-      disp = end - start;
-      el = this.el;
-      this.el.classList[end === 0 ? 'remove' : 'add']('open');
-      this.el.style.cssText = "overflow: hidden; display: block;";
-      init = (new Date).getTime();
-      repeat = function() {
-        var instance, ref, repeatLoop, step;
-        instance = (new Date).getTime() - init;
-        step = start + disp * instance / time;
-        if (instance <= time) {
-          el.style.height = step + 'px'; // if Math.floor(step) in [start..end]
-        } else {
-          el.style.cssText = `display: ${(end === 0 ? 'none' : 'block')}`;
-        }
-        repeatLoop = requestAnimationFrame(repeat);
-        if (ref = Math.floor(step), indexOf.call((function() {
-          var results = [];
-          for (var i = start; start <= end ? i <= end : i >= end; start <= end ? i++ : i--){ results.push(i); }
-          return results;
-        }).apply(this), ref) < 0) {
-          return cancelAnimationFrame(repeatLoop);
-        }
-      };
-      return repeat();
-    }
-
-  };
-
-  ref = document.querySelectorAll('.block');
-  for (i = 0, len = ref.length; i < len; i++) {
-    block = ref[i];
-    block.toggler = new slideToggler(block);
-  }
-
-  ref1 = document.querySelectorAll('button');
-  for (j = 0, len1 = ref1.length; j < len1; j++) {
-    trigger = ref1[j];
-    trigger.addEventListener('click', function() {
-      var ref2;
-      return (ref2 = this.parentNode.querySelector('.block').toggler) != null ? ref2.toggle() : void 0;
-    });
-  }
-
-  responsiveMenu = class responsiveMenu {
-    constructor(nav, opt) {
-      var base, k, l, len2, len3, len4, m, menu, menuToggle, ref2, ref3, ref4, sub, subMenu, subMenuToggle;
-      this.createToggle = this.createToggle.bind(this);
-      this.breaking = this.breaking.bind(this);
-      this.opt = opt;
-      (base = this.opt).breaking || (base.breaking = '640px');
-      this.opt.maxBreaking = parseInt(this.opt.maxBreaking) || 1040;
-      menu = nav.querySelector('.menu');
-      if (!slideToggler) {
-        slideToggler = class slideToggler {
-          constructor(el1) {
-            this.toggle = this.toggle.bind(this);
-            this.el = el1;
-            if (!this.el) {
-              return;
-            }
+      toggle(time) {
+        var currHeight, disp, el, end, init, repeat, start;
+        this.getHeight();
+        time || (time = this.height / 3 + 150);
+        currHeight = this.el.clientHeight * (getComputedStyle(this.el).display !== 'none');
+        [start, end] = currHeight > this.height / 2 ? [this.height, 0] : [0, this.height];
+        disp = end - start;
+        el = this.el;
+        this.el.classList[end === 0 ? 'remove' : 'add']('open');
+        this.el.style.cssText = "overflow: hidden; display: block;";
+        init = (new Date).getTime();
+        repeat = function() {
+          var instance, ref, repeatLoop, step;
+          instance = (new Date).getTime() - init;
+          step = start + disp * instance / time;
+          if (instance <= time) {
+            el.style.height = step + 'px'; // if Math.floor(step) in [start..end]
+          } else {
+            el.style.cssText = `display: ${(end === 0 ? 'none' : 'block')}`;
           }
-
-          toggle() {
-            this.el.classList.toggle('open');
-            return this.el.style.cssText = `display: ${(this.el.classList.contains('open') ? 'block' : 'none')}`;
+          repeatLoop = requestAnimationFrame(repeat);
+          if (ref = Math.floor(step), indexOf.call((function() {
+            var results = [];
+            for (var i = start; start <= end ? i <= end : i >= end; start <= end ? i++ : i--){ results.push(i); }
+            return results;
+          }).apply(this), ref) < 0) {
+            return cancelAnimationFrame(repeatLoop);
           }
-
         };
+        return repeat();
       }
-      ref2 = menu.querySelectorAll('ul');
-      for (k = 0, len2 = ref2.length; k < len2; k++) {
-        sub = ref2[k];
-        sub.toggler = new slideToggler(sub);
-      }
-      menuToggle = this.createToggle(nav, 'menu-toggle', 'Menu');
-      menuToggle.addEventListener('click', function() {
-        document.documentElement.classList.toggle('nav-open');
-        return menuToggle.menu.classList.toggle('open', document.documentElement.classList.contains('nav-open'));
+
+    };
+
+    ref = document.querySelectorAll('.block');
+    for (i = 0, len = ref.length; i < len; i++) {
+      block = ref[i];
+      block.toggler = new slideToggler(block);
+    }
+
+    ref1 = document.querySelectorAll('button');
+    for (j = 0, len1 = ref1.length; j < len1; j++) {
+      trigger = ref1[j];
+      trigger.addEventListener('click', function() {
+        var ref2;
+        return (ref2 = this.parentNode.querySelector('.block').toggler) != null ? ref2.toggle() : void 0;
       });
-      ref3 = menu.querySelectorAll('ul');
-      for (l = 0, len3 = ref3.length; l < len3; l++) {
-        subMenu = ref3[l];
-        subMenu.parentNode.classList.add('has-children');
-        subMenuToggle = this.createToggle(subMenu, 'sub-menu-toggle', '+');
-        subMenuToggle.addEventListener('click', function() {
-          var len4, m, open, ref4, results;
-          this.menu.toggler.toggle();
-          ref4 = this.parentNode.parentNode.querySelectorAll('ul.open');
-          results = [];
-          for (m = 0, len4 = ref4.length; m < len4; m++) {
-            open = ref4[m];
-            if (open !== this.menu) {
-              results.push(open.toggler.toggle());
-            } else {
-              results.push(void 0);
+    }
+
+    responsiveMenu = class responsiveMenu {
+      constructor(nav, opt) {
+        var base, k, l, len2, len3, len4, m, menu, menuToggle, ref2, ref3, ref4, sub, subMenu, subMenuToggle;
+        this.createToggle = this.createToggle.bind(this);
+        this.breaking = this.breaking.bind(this);
+        this.opt = opt;
+        (base = this.opt).breaking || (base.breaking = '640px');
+        this.opt.maxBreaking = parseInt(this.opt.maxBreaking) || 1040;
+        menu = nav.querySelector('.menu');
+        if (!slideToggler) {
+          slideToggler = class slideToggler {
+            constructor(el1) {
+              this.toggle = this.toggle.bind(this);
+              this.el = el1;
+              if (!this.el) {
+                return;
+              }
             }
-          }
-          return results;
+
+            toggle() {
+              this.el.classList.toggle('open');
+              return this.el.style.cssText = `display: ${(this.el.classList.contains('open') ? 'block' : 'none')}`;
+            }
+
+          };
+        }
+        ref2 = menu.querySelectorAll('ul');
+        for (k = 0, len2 = ref2.length; k < len2; k++) {
+          sub = ref2[k];
+          sub.toggler = new slideToggler(sub);
+        }
+        menuToggle = this.createToggle(nav, 'menu-toggle', 'Menu');
+        menuToggle.addEventListener('click', function() {
+          document.documentElement.classList.toggle('nav-open');
+          return menuToggle.menu.classList.toggle('open', document.documentElement.classList.contains('nav-open'));
         });
+        ref3 = menu.querySelectorAll('ul');
+        for (l = 0, len3 = ref3.length; l < len3; l++) {
+          subMenu = ref3[l];
+          subMenu.parentNode.classList.add('has-children');
+          subMenuToggle = this.createToggle(subMenu, 'sub-menu-toggle', '+');
+          subMenuToggle.addEventListener('click', function() {
+            var len4, m, open, ref4, results;
+            this.menu.toggler.toggle();
+            ref4 = this.parentNode.parentNode.querySelectorAll('ul.open');
+            results = [];
+            for (m = 0, len4 = ref4.length; m < len4; m++) {
+              open = ref4[m];
+              if (open !== this.menu) {
+                results.push(open.toggler.toggle());
+              } else {
+                results.push(void 0);
+              }
+            }
+            return results;
+          });
+        }
+        ref4 = menu.querySelectorAll('.has-children[class*=current] > ul');
+        for (m = 0, len4 = ref4.length; m < len4; m++) {
+          sub = ref4[m];
+          sub.classList.add('open');
+        }
+        document.addEventListener('DOMContentLoaded', this.breaking);
+        window.addEventListener('resize', this.breaking);
+        setTimeout(this.breaking, 3000);
       }
-      ref4 = menu.querySelectorAll('.has-children[class*=current] > ul');
-      for (m = 0, len4 = ref4.length; m < len4; m++) {
-        sub = ref4[m];
-        sub.classList.add('open');
+
+      createToggle(menu, klass, label) {
+        var toggle;
+        toggle = menu.parentNode.querySelector(`.${klass}`) || document.createElement("button");
+        toggle.classList.add(klass);
+        toggle.appendChild(document.createTextNode(label));
+        toggle.menu = menu.nodeName === 'UL' ? menu : menu.querySelector('.menu');
+        return menu.parentNode.insertBefore(toggle, menu.nextSibling);
       }
-      document.addEventListener('DOMContentLoaded', this.breaking);
-      window.addEventListener('resize', this.breaking);
-      setTimeout(this.breaking, 3000);
-    }
 
-    createToggle(menu, klass, label) {
-      var toggle;
-      toggle = menu.parentNode.querySelector(`.${klass}`) || document.createElement("button");
-      toggle.classList.add(klass);
-      toggle.appendChild(document.createTextNode(label));
-      toggle.menu = menu.nodeName === 'UL' ? menu : menu.querySelector('.menu');
-      return menu.parentNode.insertBefore(toggle, menu.nextSibling);
-    }
-
-    breaking() {
-      var div, el, isMobile, k, len2, ref2, windowWidth;
-      document.body.classList.remove('menu-mobile');
-      document.body.classList.add('menu-desktop');
-      div = document.createElement('div');
-      div.style.cssText = `position: absolute; width: ${this.opt.breaking}`;
-      document.body.appendChild(div);
-      this.menuBreak = div.clientWidth || 0;
-      document.body.removeChild(div);
-      ref2 = document.querySelectorAll(`${this.opt.breaking}`);
-      for (k = 0, len2 = ref2.length; k < len2; k++) {
-        el = ref2[k];
-        this.menuBreak += this.getWidth(el);
+      breaking() {
+        var div, el, isMobile, k, len2, ref2, windowWidth;
+        document.body.classList.remove('menu-mobile');
+        document.body.classList.add('menu-desktop');
+        div = document.createElement('div');
+        div.style.cssText = `position: absolute; width: ${this.opt.breaking}`;
+        document.body.appendChild(div);
+        this.menuBreak = div.clientWidth || 0;
+        document.body.removeChild(div);
+        ref2 = document.querySelectorAll(`${this.opt.breaking}`);
+        for (k = 0, len2 = ref2.length; k < len2; k++) {
+          el = ref2[k];
+          this.menuBreak += this.getWidth(el);
+        }
+        isMobile = (windowWidth = document.body.clientWidth) <= Math.min(this.menuBreak, this.opt.maxBreaking);
+        document.body.classList.toggle('menu-mobile', isMobile);
+        document.body.classList.toggle('menu-desktop', !isMobile);
+        if (!isMobile) {
+          return document.documentElement.classList.remove('nav-open');
+        }
       }
-      isMobile = (windowWidth = document.body.clientWidth) <= Math.min(this.menuBreak, this.opt.maxBreaking);
-      document.body.classList.toggle('menu-mobile', isMobile);
-      document.body.classList.toggle('menu-desktop', !isMobile);
-      if (!isMobile) {
-        return document.documentElement.classList.remove('nav-open');
+
+      getWidth(el) {
+        var clone, width;
+        if (el.clientWidth > 0) {
+          return el.clientWidth;
+        }
+        clone = el.cloneNode(true);
+        clone.style.cssText = 'position: absolute; visibility: hidden; display: block;';
+        el.parentNode.appendChild(clone);
+        width = clone.clientWidth;
+        el.parentNode.removeChild(clone);
+        return width;
       }
-    }
 
-    getWidth(el) {
-      var clone, width;
-      if (el.clientWidth > 0) {
-        return el.clientWidth;
-      }
-      clone = el.cloneNode(true);
-      clone.style.cssText = 'position: absolute; visibility: hidden; display: block;';
-      el.parentNode.appendChild(clone);
-      width = clone.clientWidth;
-      el.parentNode.removeChild(clone);
-      return width;
-    }
+    };
 
-  };
+    new responsiveMenu(document.querySelector('#nav'), {
+      breaking: '.logo, .tagline, .menu'
+    });
 
-  new responsiveMenu(document.querySelector('#nav'), {
-    breaking: '.logo, .tagline, .menu'
-  });
-
-}).call(this);
+  }).call(this);
 </script>
-<img src="images/FBLALOGO.JPG" alt="Girl in a jacket" width="250" height="350" id="FBLALOGO">
 </body>
 </html>

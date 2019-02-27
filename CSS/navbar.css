@@ -84,15 +84,7 @@ html {
   position: relative;
   display: inline-block;
 }
-.bgi{
-  width: 100%;
-  height: 40em;
-  position: relative;
-  background-image: url('../images/titleimage.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 .FBLALOGO {
 float:left;
 width: 20%;

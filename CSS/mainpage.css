@@ -146,11 +146,95 @@
     font-size:2.4em;
 }
 .ui-slide-in {
-  padding: 5% 5% 5%;
+  padding: 1% 1% 1% 1%;
   margin-top: 35%;
+  transform: translate( -3%);
 }
 .FBLALOGO{
   margin-top: .3%;
   width: 35%
 }
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 500 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+#section02 a {
+  padding-top: 60px;
+
+}
+#section02{
+left: -1%;
+}
+#section02 a span {
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 25%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -34%;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section02 a span::after {
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -25% 0 0 -20%;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+#section02{
+  left: -7.5%;
+  margin-top: -10%;
 }

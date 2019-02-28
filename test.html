@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="JS/navbar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title> Accuracy Accounting </title>
   </head>
@@ -255,6 +256,15 @@ refresh_button.addEventListener('click', function(){
   var newone = app.cloneNode(true);
   app.parentNode.replaceChild(newone, app);
 })
+
+</script>
+<script>
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
 </script>
 <body>
 <div class="bgi">
@@ -265,6 +275,11 @@ refresh_button.addEventListener('click', function(){
       </div>
     </div>
   </div>
-
+  <section id="section02" class="demo">
+    <a href="#section03"><span></span>Scroll</a>
+  </section>
+  <section id="section03">
+  <a><span></span>what<br> are<br> we <br>about</a>
+</section>
 </body>
 </html>

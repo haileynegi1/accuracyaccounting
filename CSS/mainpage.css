@@ -68,10 +68,15 @@
 
 .yellow {
   color: #014292;
+  font-family: 'Noto Sans', sans-serif;
+  font-style: italic;
+  font-size: 120%;
 }
 
 .black {
-  font-weight: 800;
+  font-family: 'Noto Sans', sans-serif;
+  font-style: italic;
+  font-size: 100%;
 }
 
 .thin {

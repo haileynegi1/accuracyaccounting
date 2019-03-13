@@ -87,16 +87,16 @@ html {
 
 .FBLALOGO {
 float:left;
-width: 50%;
+width: 36%;
 margin-top: .4%;
 left: 0%;
-position: absolute;
+position: relative;
 z-index:10000;
 }
 
 [id=sidebar] a:before, [id=sidebar] a:after {
   content: "";
-  position: absolute;
+  position: relative;
   top: -0.5em;
   right: -0.75em;
   bottom: -0.5em;
@@ -136,7 +136,7 @@ z-index:10000;
 }
 [id=sidebar] > :before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -158,7 +158,7 @@ z-index:10000;
 }
 .single [id=main]:before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -497,7 +497,7 @@ body {
 }
 [id=sidebar] li:before {
   content: "";
-  position: absolute;
+  position: relative;
   top: calc(.75em - 1px);
   left: 0;
   border-top: 2px solid;
@@ -564,7 +564,7 @@ body {
 }
 [id=footer] .container:before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;

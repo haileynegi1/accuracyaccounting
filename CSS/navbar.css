@@ -90,7 +90,7 @@ float:left;
 width: 20%;
 margin-top: -.5%;
 left: 0%;
-position: absolute;
+position: relative;
 z-index:10000;
 }
 

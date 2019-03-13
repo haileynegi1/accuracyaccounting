@@ -1412,7 +1412,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .post-module {
-  position: relative;
+  position: relative; right: 440px;
   z-index: 1;
   display: block;
   background: #FFFFFF;
@@ -1426,6 +1426,7 @@ body {
   -ms-transition: all 0.3s linear 0s;
   -o-transition: all 0.3s linear 0s;
   transition: all 0.3s linear 0s;
+
 }
 .post-module:hover,
 .hover {
@@ -1456,7 +1457,7 @@ body {
   padding: 12.5px 0;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  border-radius: 100%;
+  border-radius: 300%;
   color: #FFFFFF;
   font-weight: 700;
   text-align: center;
@@ -1482,6 +1483,7 @@ body {
 }
 .post-module .post-content {
   position: absolute;
+  float: left;
   bottom: 0;
   background: #FFFFFF;
   width: 100%;

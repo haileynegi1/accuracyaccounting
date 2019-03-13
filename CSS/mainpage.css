@@ -292,11 +292,14 @@ h1{
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 body {
   padding: 3em;
   font-family: oxygen;
   line-height: 1.4;
 }
+=======
+>>>>>>> d314fc576719bd03da9549cf029fcf6cf794388c
 
 .pull-left {
   margin-left: 1em;
@@ -369,12 +372,15 @@ body {
 
 @container_width: 800px;
 
+<<<<<<< HEAD
 body {
   background: darken(@white, 5%);
   font-family: 'proxima-nova-soft', sans-serif;
   font-size: 14px;
   .font-smoothing;
 }
+=======
+>>>>>>> d314fc576719bd03da9549cf029fcf6cf794388c
 
 .post-module {
   position: relative;
@@ -530,6 +536,7 @@ body {
       font-weight: bold;
       color: @dark_gray;
     }
+<<<<<<< HEAD
     span {
       color: @gray;
       font-size: 12px;
@@ -550,6 +557,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+=======
+      
+    }
+  }
+}
+
+>>>>>>> d314fc576719bd03da9549cf029fcf6cf794388c
 .post-module {
   position: relative;
   z-index: 1;

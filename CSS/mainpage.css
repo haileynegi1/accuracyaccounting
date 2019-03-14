@@ -1,6 +1,6 @@
 .bgi{
   width: 102%;
-  height: 40em;
+  height: 44em;
   position: relative;
   background-image: url('../images/titleimage.jpg');
   background-repeat: no-repeat;
@@ -156,8 +156,8 @@
   transform: translate( -3%);
 }
 .FBLALOGO{
-  margin-top: -6%;
-  width: 35%
+  margin-top: 1%;
+  width: 38%
 }
 }
 section {
@@ -242,6 +242,7 @@ left: -1%;
 }
 .bgi{
   left: -2%;
+  width: 104%;
 }
 }
 .img-wrapper{

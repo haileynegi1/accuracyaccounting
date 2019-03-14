@@ -87,16 +87,16 @@ html {
 
 .FBLALOGO {
 float:left;
-width: 15%;
-margin-top: 0%;
+width: 19%;
+margin-top: -.5%;
 left: 0%;
-position: relative;
+position: absolute;
 z-index:10000;
 }
 
 [id=sidebar] a:before, [id=sidebar] a:after {
   content: "";
-  position: relative;
+  position: absolute;
   top: -0.5em;
   right: -0.75em;
   bottom: -0.5em;
@@ -136,7 +136,7 @@ z-index:10000;
 }
 [id=sidebar] > :before {
   content: "";
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -158,7 +158,7 @@ z-index:10000;
 }
 .single [id=main]:before {
   content: "";
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -356,7 +356,7 @@ table th, table td {
   padding: 0.75em 1em;
 }
 table th:not(:last-child), table td:not(:last-child) {
-    border-right: 0.5rem solid white;
+  border-right: 0.5rem solid white;
 }
 table tr:not(:last-child) td, table tr:not(:last-child) th {
   border-bottom: 0.5rem solid white;
@@ -497,7 +497,7 @@ body {
 }
 [id=sidebar] li:before {
   content: "";
-  position: relative;
+  position: absolute;
   top: calc(.75em - 1px);
   left: 0;
   border-top: 2px solid;
@@ -564,7 +564,7 @@ body {
 }
 [id=footer] .container:before {
   content: "";
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -687,7 +687,9 @@ body {
   }
   body:not([class*=menu]) [id=header] .brand {
     flex: 1;
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   body:not([class*=menu]) [id=header] .nav {
     position: static;
@@ -704,12 +706,7 @@ body {
   text-overflow: ellipsis;
 }
 .menu-desktop [id=header] .nav {
-  position: fixed;
-  float: right;
-  right: -90px
-
-
-  ;
+  position: static;
 }
 .has-header-image [id=header] {
   padding: 0;

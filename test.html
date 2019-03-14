@@ -6,11 +6,11 @@
     <link rel="stylesheet"type="text/css" href="CSS/mainpage.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://codepen.io/mican/pen/yoOYLZ">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="JS/navbar.js"></script>
-    <script type="text/javascript" src="https://codepen.io/andytran/pen/vLmRVp.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -268,29 +268,16 @@ $(function() {
     <a href="#section03"><span></span>Learn More</a>
   </section>
 <section id="section03">
-<script>
-$(window).load(function() {
-  $('.post-module').hover(function() {
-    $(this).find('.description').stop().animate({
-      height: "toggle",
-      opacity: "toggle"
-    }, 300);
-  });
-});
-</script>
-  <!-- Post-->
-  <div class="post-module">
-    <!-- Thumbnail-->
-    <div class="thumbnail">
-      <div class="date">
-      </div><img src="images/calculator.jpg"/>
-    </div>
-    <!-- Post Content-->
-    <div class="post-content">
-      <div class="category">Tax Tools</div>
-      <p class="description">Here to offer our services in aiding you deal with your tax problems..</p>
-    </div>
-</div>
+  <article class="card">
+  <header class="card__thumb">
+    <a href="#"><img src="images/calculator.jpg"/></a>
+  </header>
+   <div class="card__body">
+    <h2 class="card__title"><a href="#">Tax Tools</a></h2>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit cumque non commodi, modi recusandae cupiditate ipsa ab soluta. Illum, dolore.</p>
+  </div>
+
+</article>
 </section>
 </body>
 </html>

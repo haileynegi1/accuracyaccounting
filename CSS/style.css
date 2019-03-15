@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 8vh;
+    font-size: 7vh;
 }
 
 h2 {
@@ -294,12 +294,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     }
 
 }
-@media and (max-width: 767px) {
 
-h1 {
-    font-size: 6vh;
-}
-}
 /*------------------------------------*\
 	Navigation
 \*------------------------------------*/

@@ -149,7 +149,11 @@ ul, ol {
 
 
 /* --  background image section  -- */
-
+@media and (max width: 700px){
+  .bg-img {
+    background-image: url('./images/titleimagemobile.jpg');
+  }
+}
 .bg-img {
     position: absolute;
     left: 0;
@@ -168,7 +172,7 @@ ul, ol {
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: .8;
+    opacity: .6;
     background: #1C1D21;
 }
 
@@ -300,7 +304,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 \*------------------------------------*/
 
 #nav {
-    padding: 10px 0px;
+    padding: 20px 0px;
     background: #FFF;
     -webkit-transition: 0.2s padding;
     transition: 0.2s padding;
@@ -317,7 +321,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     position: fixed;
     left: 0;
     right: 0;
-    padding: 0px 0px;
+    padding: 8px 0px;
     background-color: #FFF !important;
     border-bottom: 1px solid #EEE;
 }
@@ -369,7 +373,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         font-family: 'FontAwesome';
         content: "\f054";
         font-size: 6px;
-        margin-left: 6px;
+        margin-left: 2px;
         float: right;
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -382,7 +386,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         right: -50%;
         top: 0;
         background-color: #6195FF;
-        width: 200px;
+        width: 100px;
         -webkit-box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
         box-shadow: 0px 5px 5px -5px rgba(53, 64, 82, 0.2);
         -webkit-transform: translateY(15px) translateX(50%);
@@ -405,6 +409,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
         color: #FFF;
         border-top: 1px solid rgba(250, 250, 250, 0.1);
         padding: 10px 0px;
+        text-align: center;
     }
     .dropdown li:nth-child(1) a {
         border-top: none;

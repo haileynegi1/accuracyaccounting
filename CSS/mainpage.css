@@ -28,7 +28,7 @@ a:hover, a:focus {
 
 .white-text {
     color: #FFF;
-    font-size: 5.8vh;
+    font-size: 4.8vw;
 }
 .white-1{
   font-size: 3.5vh;
@@ -82,11 +82,7 @@ ul, ol {
 
 
 /* --  background image section  -- */
-@media and (max width: 700px){
-  .bg-img {
-    background-image: url('./images/titleimagemobile.jpg');
-  }
-}
+
 .bg-img {
     position: absolute;
     left: 0;
@@ -197,6 +193,13 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     #nav.nav-transparent .navbar-brand .logo {
         display: block !important;
 
+    }
+      .bg-img {
+        background-image: url('./images/titleimagemobile.jpg');
+      }
+      .white-text{
+        font-size: 10vw;
+      }
     }
 }
 

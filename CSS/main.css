@@ -232,7 +232,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .display-2 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "montserrat", sans-serif;
     font-size: 5.2rem;
     line-height: 1.255;
     color: #000000;
@@ -325,7 +325,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: 5.2rem;
+    padding-top: 8rem;
     padding-bottom: 9rem;
     background-color: white;
     color: #010507;

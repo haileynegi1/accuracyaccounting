@@ -202,7 +202,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .stats-tabs li a:hover {
-    color: #083A99;
+    color: #014292;
 }
 
 .stats-tabs li a em {
@@ -228,7 +228,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .display-1--light {
-    color: #083A99;
+    color: #014292;
 }
 
 .display-2 {
@@ -369,7 +369,7 @@ input[type="button"].btn--primary:focus {
     font-family: "montserrat", sans-serif;
     font-size: 8.4rem;
     line-height: 1;
-    color: #083A99;
+    color: #014292;
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -502,7 +502,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background-color: #083A99;
+    background-color: #014292;
     background-image: url("../images/contact-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
@@ -546,7 +546,7 @@ input[type="button"].btn--primary:focus {
     padding: 0 2rem;
     margin: 0;
     color: #FFFFFF;
-    background: #083A99;
+    background: #014292;
 }
 
 .s-contact .form-field label::after {
@@ -557,14 +557,14 @@ input[type="button"].btn--primary:focus {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid #083A99;
+    border-right: 5px solid #014292;
 }
 
 .contact__line {
     display: block;
     width: 2px;
     height: 20.4rem;
-    background-color: #083A99;
+    background-color: #014292;
     position: absolute;
     left: 50%;
     top: -10.2rem;
@@ -618,7 +618,7 @@ input[type="button"].btn--primary:focus {
 .contact-content textarea:focus,
 .contact-content select:focus {
     color: #FFFFFF;
-    border-bottom: 1px solid #083A99;
+    border-bottom: 1px solid #014292;
 }
 
 .contact-content button,
@@ -634,25 +634,25 @@ input[type="button"].btn--primary:focus {
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #083A99;    /* Firefox 18- */
+    color: #014292;    /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #083A99;    /* Firefox 19+ */
+    color: #014292;    /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #083A99;
+    color: #014292;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #083A99 !important;
+    color: #014292 !important;
 }
 .contact-primary, .contact-secondary {
     float: left;
@@ -709,7 +709,7 @@ input[type="button"].btn--primary:focus {
 
 .contact-social li a:hover,
 .contact-social li a:focus {
-    color: #083A99;
+    color: #014292;
 }
 
 .contact-social li:last-child {
@@ -732,7 +732,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .message-success {
-    color: #083A99;
+    color: #014292;
 }
 
 .message-warning i, .message-success i {

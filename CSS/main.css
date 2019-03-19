@@ -248,12 +248,12 @@ input[type="button"].btn--primary:focus {
 }
 
 .subhead {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat", sans-serif;
     font-size: 1.7rem;
     line-height: 1.333;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: #39b54a;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -502,7 +502,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background-color: #151515;
+    background-color: #083A99;
     background-image: url("../images/contact-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
@@ -591,7 +591,7 @@ input[type="button"].btn--primary:focus {
 
 .contact-content h5 {
     margin-top: 0;
-    color: #39b54a;
+    color: #6195FF;
 }
 
 .contact-content input[type="email"],
@@ -896,8 +896,9 @@ input[type="button"].btn--primary:focus {
     }
 }
 
-
-
+.message{
+  font-family: "montserrat" , sans-serif;
+}
 
 
 

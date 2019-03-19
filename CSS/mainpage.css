@@ -512,7 +512,7 @@ header {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-    z-index: -1;
+    z-index: 1;
 }
 
 .home-content h1 {

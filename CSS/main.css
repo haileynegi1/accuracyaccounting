@@ -202,7 +202,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .stats-tabs li a:hover {
-    color: #39b54a;
+    color: #083A99;
 }
 
 .stats-tabs li a em {
@@ -546,7 +546,7 @@ input[type="button"].btn--primary:focus {
     padding: 0 2rem;
     margin: 0;
     color: #FFFFFF;
-    background: #39b54a;
+    background: #083A99;
 }
 
 .s-contact .form-field label::after {
@@ -557,14 +557,14 @@ input[type="button"].btn--primary:focus {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid #39b54a;
+    border-right: 5px solid #083A99;
 }
 
 .contact__line {
     display: block;
     width: 2px;
     height: 20.4rem;
-    background-color: #39b54a;
+    background-color: #083A99;
     position: absolute;
     left: 50%;
     top: -10.2rem;
@@ -618,7 +618,7 @@ input[type="button"].btn--primary:focus {
 .contact-content textarea:focus,
 .contact-content select:focus {
     color: #FFFFFF;
-    border-bottom: 1px solid #39b54a;
+    border-bottom: 1px solid #083A99;
 }
 
 .contact-content button,
@@ -634,25 +634,25 @@ input[type="button"].btn--primary:focus {
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 18- */
+    color: #083A99;    /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 19+ */
+    color: #083A99;    /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #4f4f4f;
+    color: #083A99;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #4f4f4f !important;
+    color: #083A99 !important;
 }
 .contact-primary, .contact-secondary {
     float: left;
@@ -709,7 +709,7 @@ input[type="button"].btn--primary:focus {
 
 .contact-social li a:hover,
 .contact-social li a:focus {
-    color: #39b54a;
+    color: #083A99;
 }
 
 .contact-social li:last-child {
@@ -732,7 +732,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .message-success {
-    color: #39b54a;
+    color: #083A99;
 }
 
 .message-warning i, .message-success i {
